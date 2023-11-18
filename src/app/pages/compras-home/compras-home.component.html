@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 class="text-center">Productos</h1>
+    <div class="row">
+        <div class="col mb-3 d-flex justify-content-end">
+            <a class="btn btn-outline-success" [routerLink]="['/addproduct']"> Agregar Producto </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 card" *ngFor="let product of products">
+
+            <div class="card-body">
+                <img [src]="product.image" [title]="product.title" [alt]="product.title">
+                <h5 class="card-title"> {{product.title}}</h5>
+
+                <a [routerLink]="['/product/',product.id]" class="btn btn-success mx-2">Ver producto</a>
+                <a [routerLink]="['/addproduct',product.id]" class="btn btn-info">Editar</a>
+
+            </div>
+        </div>
+    </div>
+</div>

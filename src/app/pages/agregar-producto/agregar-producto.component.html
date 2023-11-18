@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col">
+            <h3 class="text-center"> {{titulo}} Producto</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="formulario" (ngSubmit)="guardar()">
+                <div class="row mt-3">
+                    <div class="col-sm-4">
+                        <label for="titulo">Titulo</label>
+                        <input type="text" placeholder="Titulo" formControlName="title" id="titulo" name="titulo" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="price">Price</label>
+                        <input type="text" placeholder="Price" id="price" formControlName="price" name="price" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="description">Description</label>
+                        <input type="text" placeholder="Description" id="description" formControlName="description" name="description" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-6">
+                        <label for="image">Imagen</label>
+                        <input type="text" placeholder="Imagen" id="image" name="image" formControlName="image" class="form-control">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="category">Category</label>
+                        <input type="text" placeholder="Category" id="category" formControlName="category" name="category" class="form-control">
+                    </div>
+                </div>
+                   
+                <div class="row mt-3">
+                    <div class="col">
+                        <button type="submit" class="btn btn-outline-primary mx-2" >{{titulo}} </button>
+                        <button class="btn btn-outline-danger" [routerLink]="['/home']">Regresar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>

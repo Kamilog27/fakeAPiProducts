@@ -1,0 +1,18 @@
+<div class="container" *ngIf="product">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                  <h1> {{product.title}} </h1> 
+                  <img [src]="product.image" [alt]="product.title"> 
+                  <h4> <strong>Price: </strong>${{product.price}}</h4>
+                  <p> <strong>Description: </strong> {{product.description}} </p>
+                  <p> <strong>Category: </strong> {{product.category}} </p>
+                  <p> <strong>Rate: </strong> {{product.rating.rate}} </p>
+                  <p> <strong>Count: </strong> {{product.rating.count}} </p>
+                  <button class="btn btn-danger" [routerLink]="['/home']"> Regresar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
